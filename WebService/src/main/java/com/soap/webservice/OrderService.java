@@ -11,11 +11,11 @@ import java.util.ArrayList;
 public interface OrderService {
 
     @WebMethod
-    Order getOrderById(int id);
+    Order getOrderById(int id) throws OrderNotFound;
 
     @WebMethod
     ArrayList<Order> getAllOrders();
 
     @WebMethod
-    Order addOrder(int id, Order order);
+    Order addOrder(Order order);
 }
